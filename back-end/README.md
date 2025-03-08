@@ -1,8 +1,6 @@
-![logo supmap](./docs/images/logo-full-white.png)
+# 4CITE - Hotel app backend
 
-# SUPMAP - Backend
-
-Welcome to the **[SUPMAP Backend](https://github.com/SUPMAP-DELTA-FORCE/supmap-backend.git)** repository! This project contains the source code for our backend and RESTful API built with **NestJS**.
+Welcome to the Hotel repository! This project contains the source code for our backend and RESTful API built with **NestJS**.
 
 ---
 
@@ -12,7 +10,6 @@ This repository hosts the backend services designed to provide a seamless experi
 
 Features include:
 
-- **Mapbox Navigation API Integration**
 - **Firebase Authentication**
 - **Vercel blob storage ( for production )**
 - **MinIO S3 emulation ( for local dev, mocks Vercel blob )**
@@ -132,7 +129,7 @@ For a better understanding of the Supmap architecture please read the [Architect
 
 after having sucessfully run the app, you can head to the `localhost:3000/api` to discover the OpenAPI specification
 
-for production documentation please refer to [api.supmap.fr/api](https://api.supmap.fr/api)
+for production documentation please refer to [api.hotel.fr/api](https://api.hotel.fr/api)
 
 ## 🚀 About Deployment
 
@@ -140,12 +137,7 @@ This project is deployed on [Railway](https://railway.com)
 Continuous deployment is enabled on the `main` branch of the github repository
 
 We encourage you to make Pull requests on the project
-Upon merge of you pull request to the `main` branch, your changes shall be automatically deployed to `api.supmap.fr`
-
-## 🤝 Contributing
-
-We welcome contributions to improve this project!  
-Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to contribute.
+Upon merge of you pull request to the `main` branch, your changes shall be automatically deployed to `api.hotel.fr`
 
 ---
 
@@ -153,4 +145,3 @@ Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to co
 
 - For production deployment, ensure sensitive environment variables like `DATABASE_PASSWORD` and `JWT_SECRET` are securely managed using a secrets manager.
 - Docker Compose services use default ports. Modify the `docker-compose.yml` file if you experience port conflicts.
-- A Discord bot has been enabled to monitor the most important events relative to this repository. Join the [Discord channel](https://discord.gg/8jjrztYUTZ)
