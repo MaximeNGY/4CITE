@@ -1,16 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
-import "./Register.css";  // Importing the CSS file
+import "./Register.css";  
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [pseudo, setPseudo] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");  // For displaying error messages
+  const [error, setError] = useState(""); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");  // Reset error message on each attempt
+    setError("");  
 
     try {
       await axios.post("http://localhost:5000/api/auth/register", {

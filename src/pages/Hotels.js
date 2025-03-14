@@ -64,7 +64,7 @@ const Hotels = () => {
       <h2 className="page-title">Available Hotels</h2>
       <div className="hotels-grid">
         {hotels.map((hotel) => (
-          <div key={hotel.id} className="hotel-card">
+          <div key={hotel._id} className="hotel-card">
             {hotel.picture_list?.length > 0 && (
               <img
                 src={hotel.picture_list[0]}
@@ -82,7 +82,7 @@ const Hotels = () => {
               <input
                 type="date"
                 value={bookingData[hotel.id]?.check_in || ""}
-                onChange={(e) => handleDateChange(hotel.id, "check_in", e.target.value)}
+                onChange={(e) => handleDateChange(hotel._id, "check_in", e.target.value)}
                 className="date-input"
               />
             </div>
@@ -92,14 +92,14 @@ const Hotels = () => {
               <input
                 type="date"
                 value={bookingData[hotel.id]?.check_out || ""}
-                onChange={(e) => handleDateChange(hotel.id, "check_out", e.target.value)}
+                onChange={(e) => handleDateChange(hotel._id, "check_out", e.target.value)}
                 className="date-input"
               />
             </div>
 
             <button
               className="book-now-btn"
-              onClick={() => handleBooking(hotel.id)}
+              onClick={() => handleBooking(hotel._id)}
             >
               Book Now
             </button>

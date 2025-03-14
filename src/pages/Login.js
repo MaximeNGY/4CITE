@@ -19,7 +19,7 @@ const Login = () => {
         password,
       });
       localStorage.setItem("token", response.data.token);
-      navigate("/dashboard");
+      navigate("/my-bookings");
     } catch (error) {
       setError("Invalid credentials, please try again.");
     }
