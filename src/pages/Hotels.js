@@ -91,7 +91,7 @@ const Hotels = () => {
               <label className="date-label">Check-out:</label>
               <input
                 type="date"
-                value={bookingData[hotel.id]?.check_out || ""}
+                value={bookingData[hotel._id]?.check_out || ""}
                 onChange={(e) => handleDateChange(hotel._id, "check_out", e.target.value)}
                 className="date-input"
               />
