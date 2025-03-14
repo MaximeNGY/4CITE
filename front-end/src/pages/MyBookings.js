@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchBookings } from "../api/bookingApi";
+import "./MyBookings.css";  // Import the CSS file
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -20,17 +21,18 @@ const MyBookings = () => {
   }, [token]);
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">My Bookings</h2>
+    <div className="bookings-container">
+      <h2 className="page-title">My Bookings</h2>
       {bookings.length === 0 ? (
-        <p>No bookings found.</p>
+        <p className="no-bookings">No bookings found.</p>
       ) : (
-        <ul className="space-y-4">
+        <ul className="bookings-list">
           {bookings.map((booking) => (
-            <li key={booking.id} className="border p-4 rounded-lg shadow">
-              <h3 className="text-lg font-semibold">Hotel: {booking.hotelName}</h3>
-              <p className="text-gray-600">Date: {booking.check_in}</p>
-              <p className="text-gray-600">Status: {booking.check_out}</p>
+            <li key={booking.id} className="booking-card">
+              <h3 className="hotel-name">{booking.hotelName}</h3>
+              <p className="booking-date">Check-in: {booking.check_in}</p>
+              <p className="booking-date">Check-out: {booking.check_out}</p>
+              <p className="booking-status">Status: {booking.status}</p>
             </li>
           ))}
         </ul>

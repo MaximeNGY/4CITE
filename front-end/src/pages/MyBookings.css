@@ -1,0 +1,77 @@
+/* Overall container */
+.bookings-container {
+    padding: 30px;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+  }
+  
+  /* Page title */
+  .page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* No bookings found message */
+  .no-bookings {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #888;
+  }
+  
+  /* List of bookings */
+  .bookings-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Booking card */
+  .booking-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .booking-card:hover {
+    transform: translateY(-5px); /* Hover effect for better interaction */
+  }
+  
+  /* Hotel name */
+  .hotel-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Booking dates and status */
+  .booking-date, .booking-status {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 1.8rem;
+    }
+  
+    .booking-card {
+      padding: 15px;
+    }
+  
+    .hotel-name {
+      font-size: 1.3rem;
+    }
+  
+    .booking-date, .booking-status {
+      font-size: 0.9rem;
+    }
+  }
+  

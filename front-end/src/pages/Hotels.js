@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchHotels } from "../api/hotelApi";
 import { createBooking } from "../api/bookingApi";
+import "./Hotels.css";
 
 const Hotels = () => {
   const [hotels, setHotels] = useState([]);
@@ -32,7 +33,6 @@ const Hotels = () => {
     }));
   };
 
-  
   const handleBooking = async (hotelId) => {
     if (!token) {
       alert("You must be logged in to book a hotel.");
@@ -60,45 +60,45 @@ const Hotels = () => {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Available Hotels</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="hotels-container">
+      <h2 className="page-title">Available Hotels</h2>
+      <div className="hotels-grid">
         {hotels.map((hotel) => (
-          <div key={hotel.id} className="border p-4 rounded-lg shadow">
+          <div key={hotel.id} className="hotel-card">
             {hotel.picture_list?.length > 0 && (
               <img
                 src={hotel.picture_list[0]}
                 alt={hotel.name}
-                className="w-full h-40 object-cover rounded"
+                className="hotel-image"
               />
             )}
-            <h3 className="text-lg font-semibold mt-2">{hotel.name}</h3>
-            <p className="text-gray-600">{hotel.location}</p>
-            <p className="text-sm mt-1">{hotel.description}</p>
+            <h3 className="hotel-name">{hotel.name}</h3>
+            <p className="hotel-location">{hotel.location}</p>
+            <p className="hotel-description">{hotel.description}</p>
 
-            {/* Champs de saisie pour les dates */}
-            <div className="mt-4">
-              <label className="block text-sm font-medium">Check-in:</label>
+            {/* Date input fields */}
+            <div className="date-fields">
+              <label className="date-label">Check-in:</label>
               <input
                 type="date"
                 value={bookingData[hotel.id]?.check_in || ""}
                 onChange={(e) => handleDateChange(hotel.id, "check_in", e.target.value)}
-                className="border p-2 rounded w-full mt-1"
+                className="date-input"
               />
             </div>
 
-            <div className="mt-4">
-              <label className="block text-sm font-medium">Check-out:</label>
+            <div className="date-fields">
+              <label className="date-label">Check-out:</label>
               <input
                 type="date"
                 value={bookingData[hotel.id]?.check_out || ""}
                 onChange={(e) => handleDateChange(hotel.id, "check_out", e.target.value)}
-                className="border p-2 rounded w-full mt-1"
+                className="date-input"
               />
             </div>
 
             <button
-              className="bg-blue-500 text-white p-2 rounded mt-3"
+              className="book-now-btn"
               onClick={() => handleBooking(hotel.id)}
             >
               Book Now

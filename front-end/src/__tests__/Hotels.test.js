@@ -8,7 +8,7 @@ jest.mock("../api/bookingApi");
 
 describe("Hotels Component", () => {
   beforeEach(() => {
-    localStorage.setItem("token", "mockToken"); // Mock user login
+    localStorage.setItem("token", "mockToken"); 
   });
 
   afterEach(() => {
