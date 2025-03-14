@@ -1,0 +1,76 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  /* Logo Section */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .hotel-icon {
+    color: #facc15; /* Yellow */
+    font-size: 24px;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #facc15; /* Yellow */
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .btn-login {
+    background-color: white;
+    color: #2563eb; /* Blue */
+  }
+  
+  .btn-login:hover {
+    background-color: #facc15; /* Yellow */
+    color: #1f2937; /* Dark Gray */
+  }
+  
+  .btn-register {
+    background-color: #facc15; /* Yellow */
+    color: #1e3a8a; /* Dark Blue */
+  }
+  
+  .btn-register:hover {
+    background-color: #fde047; /* Lighter Yellow */
+  }
+  
