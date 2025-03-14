@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchBookings } from "../api/bookingApi";
-import "./MyBookings.css";  // Import the CSS file
+import "./MyBookings.css"; 
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
@@ -29,10 +29,11 @@ const MyBookings = () => {
         <ul className="bookings-list">
           {bookings.map((booking) => (
             <li key={booking.id} className="booking-card">
-              <h3 className="hotel-name">{booking.hotelName}</h3>
+              <h3 className="hotel-name">{booking.hotel.name}</h3>
               <p className="booking-date">Check-in: {booking.check_in}</p>
               <p className="booking-date">Check-out: {booking.check_out}</p>
-              <p className="booking-status">Status: {booking.status}</p>
+              <p className="booking-location">Location: {booking.hotel.location}</p>
+              <p className="booking-Description">Description: {booking.hotel.description}</p>
             </li>
           ))}
         </ul>
