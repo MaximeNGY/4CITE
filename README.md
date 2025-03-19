@@ -1,100 +1,94 @@
 # Akkor Hotel - Frontend
 
-Bienvenue dans le projet Akkor Hotel ! Ce projet est une application permettant de gérer la réservation d'hôtels avec une interface utilisateur moderne et réactive. Ce dépôt contient la partie **Frontend** de l'application.
+Welcome to the Akkor Hotel project! This project is an application for managing hotel reservations with a modern and responsive user interface. This repository contains the **Frontend** part of the application.
 
 ## Description
 
-Akkor Hotel permet aux utilisateurs de rechercher des hôtels, de s'enregistrer, de réserver des chambres, et de gérer leurs réservations. Le système de gestion des utilisateurs est intégré avec différentes rôles (utilisateur, administrateur).
+Akkor Hotel allows users to search for hotels, register, book rooms, and manage their reservations. The user management system supports different roles (user, administrator).
 
-### Fonctionnalités :
-- Inscription et connexion des utilisateurs.
-- Gestion des hôtels (affichage, réservation, annulation).
-- Interface utilisateur réactive et moderne.
-- Affichage des réservations de l'utilisateur.
+### Features:
+- User registration and login.
+- Hotel management (viewing, booking, cancellation).
+- Modern and responsive user interface.
+- Display of user reservations.
 
-## Prérequis
+## Requirements
 
-Avant de commencer, assurez-vous d'avoir installé ces outils :
+Before starting, make sure you have the following tools installed:
 
-- [Node.js](https://nodejs.org) version 14.x ou supérieure.
-- [npm](https://www.npmjs.com) (généralement installé avec Node.js).
-- [Git](https://git-scm.com) pour cloner le projet.
+- [Node.js](https://nodejs.org) version 14.x or higher.
+- [npm](https://www.npmjs.com) (usually installed with Node.js).
+- [Git](https://git-scm.com) to clone the project.
 
 ## Installation
 
-1. Clonez ce dépôt sur votre machine locale :
+1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/yourusername/akkor-hotel-frontend.git
+    git clone https://github.com/MaximeNGY/4CITE.git
     ```
 
-2. Allez dans le répertoire du projet :
+2. Navigate to the project directory:
     ```bash
-    cd akka-hotel-frontend
+    cd 4CITE
     ```
 
-3. Installez les dépendances :
+3. Install the dependencies:
     ```bash
     npm install
     ```
 
-4. Lancez l'application en mode développement :
+4. Start the application in development mode:
     ```bash
     npm start
     ```
 
-    L'application sera accessible sur `http://localhost:3000`.
+    The application will be available at `http://localhost:3000`.
 
-## Structure du projet
+## Project Structure
 
-- **`src/`** : Contient le code source de l'application React.
-  - **`components/`** : Composants réutilisables (ex. Navbar, Formulaires, etc.).
-  - **`pages/`** : Pages principales (Home, Register, Login, Hotels, etc.).
-  - **`features/`** : Réductions Redux et logique d'état global.
-  - **`App.js`** : Le composant principal avec les routes.
-  - **`index.js`** : Point d'entrée de l'application.
+- **`src/`** : Contains the source code of the React application.
+  - **`__tests__/`** : Contains test files.
+  - **`api/`** : API-related logic.
+  - **`components/`** : Reusable components (e.g., Navbar, Forms, etc.).
+  - **`features/`** : Redux slices and global state logic.
+  - **`images/`** : Contains image assets.
+  - **`pages/`** : Main pages (Home, Register, Login, Hotels, etc.).
+  - **`App.js`** : The main component with routes.
+  - **`index.js`** : Application entry point.
 
 ## Routes
 
-L'application utilise **React Router** pour gérer les différentes pages :
+The application uses **React Router** to manage different pages:
 
-- `/login` : Page de connexion.
-- `/register` : Page d'inscription.
-- `/hotels` : Affichage des hôtels disponibles.
-- `/my-bookings` : Affichage des réservations de l'utilisateur.
-- `/admin` : Page d'administration (accessible uniquement par un administrateur).
+- `/home` : Home page.
+- `/login` : Login page.
+- `/register` : Registration page.
+- `/hotels` : Displays available hotels.
+- `/my-bookings` : Displays the user's bookings.
+- `/admin` : Administration page (accessible only to administrators).
 
-## Tests
+## Testing
 
-L'application utilise **Jest** et **React Testing Library** pour les tests.
+The application uses **Jest** and **React Testing Library** for testing.
 
-1. Pour exécuter les tests :
+1. To run the tests:
     ```bash
     npm test
     ```
 
-2. Pour lancer les tests de manière continue en mode surveillance :
+2. To run tests in watch mode:
     ```bash
     npm run test:watch
     ```
 
-## Lien vers la documentation
+## Contributing
 
-La documentation complète de l'API est disponible ici :  
-[Documentation de l'API Akkor Hotel](https://linkversladocumentation.com)
+1. Fork the project.
+2. Create a branch for your feature (`git checkout -b feature/my-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push the branch (`git push origin feature/my-feature`).
+5. Open a pull request.
 
-## Contribuer
+## Authors
 
-1. Forkez le projet.
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/ma-fonctionnalite`).
-3. Commitez vos changements (`git commit -am 'Ajout d'une nouvelle fonctionnalité'`).
-4. Poussez la branche (`git push origin feature/ma-fonctionnalite`).
-5. Ouvrez une pull request.
-
-## Auteurs
-
-- **Votre Nom** - Développeur principal
-- **Nom du co-développeur (si applicable)** - Co-développeur
-
-## License
-
-Ce projet est sous la licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+- **KIBANGU TSIMBA Chrinovic** - Lead Developer
